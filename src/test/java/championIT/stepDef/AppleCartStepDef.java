@@ -17,6 +17,7 @@ public class AppleCartStepDef {
 	    	
 		test.visitHomePage("https://www.apple.com/");
 		
+		
 
 	}
 
@@ -38,7 +39,7 @@ public class AppleCartStepDef {
 	public void choose_keyboard_and_add_to_cart(String KeyBoardLang) {
 		
 		test.chooseKeyBoardType(KeyBoardLang);
-		
+		System.out.println("test ***************");
 	    
 	    
 	}
