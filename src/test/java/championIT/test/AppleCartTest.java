@@ -1,5 +1,7 @@
 package championIT.test;
 
+
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -236,8 +238,14 @@ public class AppleCartTest implements ITestListener {
 		
 		try {
 			Thread.sleep(1000);
-			driver.quit();
+			driver.quit(); // "./extent_report/index.html"
+			
+			//Desktop.getDesktop().browse(new File("./extent_report/index.html"));
+			Desktop.getDesktop().browse(new File("extent_report/index.html").toURI());
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
