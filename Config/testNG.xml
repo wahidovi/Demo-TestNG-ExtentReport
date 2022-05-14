@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- parallel="instances" thread-count="5" -->
+
+<!--  <suite name="Champion-IT" parallel="methods" thread-count="5" verbose="1"> -->
+
+	<suite name="Champion-IT" parallel="tests" thread-count="5" verbose="1">
+
+
+	<!-- <listeners>
+		<listener class-name="listener.TestNgTestListener"></listener>
+	</listeners> -->
+	
+	<test name="Search_Box">
+		<classes>
+			<class name="championIT.testRunner.TestNgRunner" />
+		</classes>
+	</test>
+</suite>
