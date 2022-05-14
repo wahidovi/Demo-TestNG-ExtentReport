@@ -2,6 +2,8 @@ package championIT.test;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -13,6 +15,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -176,6 +179,22 @@ public class AppleCartTest implements ITestListener {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		try {
+			Assert.assertEquals(httpStatusCode(), 200);
+		} catch (AssertionError e) {
+			// TODO Auto-generated catch block
+			
+			ExtentTest test_report = extReport.createTest("Cart Page Test Failed");
+			test_report.assignDevice("Windows 10");
+			test_report.log(Status.FAIL, "BAD HTTP " + httpStatusCode());
+			test_report.addScreenCaptureFromPath(screenShot(driver), " HTTP ERROR " + httpStatusCode());
+			
+		}
+		
+		
+		
+	
 	}
 
 	@Test
@@ -280,6 +299,24 @@ public class AppleCartTest implements ITestListener {
 	public void testCase(ITestResult result) {
 		result.getStatus();
 
+	}
+	
+	public  int httpStatusCode() {
+		try {
+			String url = driver.getCurrentUrl();
+			HttpURLConnection cn = (HttpURLConnection)new URL(url).openConnection();
+			cn.setRequestMethod("HEAD");
+		      // connection initiate
+		      cn.connect();
+		      //get response code
+		      int res = cn.getResponseCode();
+		      return res;
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return 0;
+		}
 	}
 
 }
