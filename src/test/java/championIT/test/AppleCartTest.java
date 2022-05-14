@@ -162,16 +162,17 @@ public class AppleCartTest implements ITestListener {
 			e.printStackTrace();
 		}
 
-		appleCart.getAdd_to_cart().click();
+		
 
 		try {
+			appleCart.getAdd_to_cart().click();
 			Thread.sleep(500);
-		} catch (InterruptedException e) {
+		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
 
-		appleCart.getReview_bag().click();
+		
 
 		try {
 			Thread.sleep(500);
@@ -181,11 +182,12 @@ public class AppleCartTest implements ITestListener {
 		}
 		
 		try {
+			appleCart.getReview_bag().click();
 			Assert.assertEquals(httpStatusCode(), 200);
 		} catch (AssertionError e) {
 			// TODO Auto-generated catch block
 			
-			ExtentTest test_report = extReport.createTest("Cart Page Test Failed");
+			ExtentTest test_report = extReport.createTest("BAD HTTP");
 			test_report.assignDevice("Windows 10");
 			test_report.log(Status.FAIL, "BAD HTTP " + httpStatusCode());
 			test_report.addScreenCaptureFromPath(screenShot(driver), " HTTP ERROR " + httpStatusCode());
@@ -231,6 +233,14 @@ public class AppleCartTest implements ITestListener {
 		
 		
 		extReport.flush();
+		
+		try {
+			Thread.sleep(1000);
+			driver.quit();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public double stringPriceFormatToDouble(String priceWithDollarSign) {
