@@ -176,14 +176,10 @@ public class AppleCartTest implements ITestListener {
 
 		
 
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		
 		try {
+			Thread.sleep(500);
 			appleCart.getReview_bag().click();
 			Assert.assertEquals(httpStatusCode(), 200);
 		} catch (AssertionError e) {
@@ -194,6 +190,9 @@ public class AppleCartTest implements ITestListener {
 			test_report.log(Status.FAIL, "BAD HTTP " + httpStatusCode());
 			test_report.addScreenCaptureFromPath(screenShot(driver), " HTTP ERROR " + httpStatusCode());
 			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		
@@ -208,7 +207,9 @@ public class AppleCartTest implements ITestListener {
 //				.until(ExpectedConditions.visibilityOf(appleCart.getTotal_incl_tax()));
 
 		
-		WebElement element = explicitWaitElementToBeVisible(driver, appleCart.getTotal_incl_tax());
+		//WebElement element = explicitWaitElementToBeVisible(driver, appleCart.getTotal_incl_tax());
+		
+		WebElement element = appleCart.getTotal_incl_tax();
 
 		String priceWithDollarSign = element.getText();
 
