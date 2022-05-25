@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="championIT.test.AppleCartTest">
+      <class name="championIT.testRunner.TestNgRunner$TestRunner">
         <methods>
-          <include name="selectMacBookProBaseModel"/>
-          <include name="gotoCart"/>
-          <include name="finalPriceOnCart"/>
-          <include name="chooseKeyBoardType"/>
-          <include name="selectFromSearchSuggestions"/>
-          <include name="searchOn"/>
-          <include name="visitHomePage"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
-      </class> <!-- championIT.test.AppleCartTest -->
+      </class> <!-- championIT.testRunner.TestNgRunner$TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

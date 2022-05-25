@@ -12,6 +12,12 @@ Feature: User add product to add to cart
 		| MacBook Pro | Arabic	| 12190.41 |
 
 
+#
+#	@IntegrationTest
+#	Scenario Outline: Select product and add to cart
+#		Given user have access to apple homepage
+#		When user search for "<product>" 
+
 #	@test2	
 #	Scenario Outline: Select product and add to cart
 #		Given user have access to apple homepage

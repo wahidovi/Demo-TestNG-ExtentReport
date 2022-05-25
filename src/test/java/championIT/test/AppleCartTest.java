@@ -38,6 +38,7 @@ import championIT.Utils.DriverMan;
 public class AppleCartTest implements ITestListener {
 
 	private DriverMan driverManager = new DriverMan();
+	
 	private WebDriver driver = driverManager.getDriver();
 
 	private AppleCartPOM appleCart = new AppleCartPOM(driver);

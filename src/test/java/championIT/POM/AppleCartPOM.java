@@ -10,7 +10,7 @@ public class AppleCartPOM {
 	WebDriver driver;
 	
 	public AppleCartPOM(WebDriver driver) {
-		
+		this.driver =driver;
 		PageFactory.initElements(driver, this);
 	}
 	
