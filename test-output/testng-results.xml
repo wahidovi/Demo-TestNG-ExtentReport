@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T20:04:07 PDT" name="Default suite" finished-at="2022-05-26T20:04:30 PDT" duration-ms="23346">
+  <suite started-at="2022-05-26T20:31:00 PDT" name="Default suite" finished-at="2022-05-26T20:31:27 PDT" duration-ms="27200">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-05-26T20:04:07 PDT" name="Default test" finished-at="2022-05-26T20:04:30 PDT" duration-ms="23346">
+    <test started-at="2022-05-26T20:31:00 PDT" name="Default test" finished-at="2022-05-26T20:31:27 PDT" duration-ms="27200">
       <class name="championIT.testRunner.TestNgRunner$TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" started-at="2022-05-26T20:04:07 PDT" name="setUpClass" finished-at="2022-05-26T20:04:07 PDT" duration-ms="284" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" started-at="2022-05-26T20:31:00 PDT" name="setUpClass" finished-at="2022-05-26T20:31:00 PDT" duration-ms="322" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2c3f43d1]]>
+                <![CDATA[org.testng.TestRunner@2b6fb197]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" started-at="2022-05-26T20:04:07 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-26T20:04:30 PDT" duration-ms="23024" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" started-at="2022-05-26T20:31:00 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-26T20:31:27 PDT" duration-ms="26826" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,10 +34,58 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: headless chrome=102.0.5005.62)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'WAHIDHPZ220', ip: '10.0.0.226', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd583f839063b59156ed2706d4277dc6, clickElement {id=e3087205-8e80-4ac8-9804-66139f4e05c5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.62, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\WAHIDO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60560/devtoo..., se:cdpVersion: 102.0.5005.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (bd583f839063b59156ed2706d4277dc6)] -> xpath: //a[@id='ac-gn-link-search']]
+Session ID: bd583f839063b59156ed2706d4277dc6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: headless chrome=102.0.5005.62)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'WAHIDHPZ220', ip: '10.0.0.226', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd583f839063b59156ed2706d4277dc6, clickElement {id=e3087205-8e80-4ac8-9804-66139f4e05c5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.62, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\WAHIDO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60560/devtoo..., se:cdpVersion: 102.0.5005.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (bd583f839063b59156ed2706d4277dc6)] -> xpath: //a[@id='ac-gn-link-search']]
+Session ID: bd583f839063b59156ed2706d4277dc6
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+at jdk.proxy2/jdk.proxy2.$Proxy28.click(Unknown Source)
+at championIT.test.AppleCartTest.searchOn(AppleCartTest.java:87)
+at championIT.stepDef.AppleCartStepDef.user_search_for(AppleCartStepDef.java:27)
+at ✽.user search for "MacBook Pro"(file:///C:/Users/Wahid%20Ovi/eclipse-workspace/CucumberTestNGFrameworkClass/Champion-IT-Group-Project/Features/AppleCart.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" started-at="2022-05-26T20:04:30 PDT" name="tearDownClass" finished-at="2022-05-26T20:04:30 PDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:championIT.testRunner.TestNgRunner$TestRunner@18271936]" started-at="2022-05-26T20:31:27 PDT" name="tearDownClass" finished-at="2022-05-26T20:31:27 PDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
