@@ -18,7 +18,7 @@ public class DriverMan {
     public DriverMan() {
     	
     	ChromeOptions co = new ChromeOptions();
-    	co.setHeadless(true);
+    	co.setHeadless(false);
 //		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 //	    driver = new ChromeDriver();
     	driver = WebDriverManager.chromedriver().capabilities(co).create();
