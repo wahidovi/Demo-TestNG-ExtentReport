@@ -39,7 +39,7 @@ public class AppleCartStepDef {
 	public void choose_keyboard_and_add_to_cart(String KeyBoardLang) {
 		
 		test.chooseKeyBoardType(KeyBoardLang);
-		System.out.println("*******Test *********");
+		System.out.println("*******Test **********");
 	    
 	    
 	}
